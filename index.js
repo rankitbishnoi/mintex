@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+var helmet = require('helmet');
+app.use(helmet());
 
 var session = require('express-session');
 var logger = require('morgan');
@@ -34,9 +36,7 @@ app.set('view engine', 'jade');
 app.set('views',path.join(__dirname + '/app/views'));
 
 
-mongoose.connect("mongodb://localhost/myapp",{
-     useMongoClient: true,
-});
+mongoose.connect("mongodb://localhost/myapp");
 
 mongoose.connection.on('connected', () => {
      console.log('Mongoose connected to mongodb://localhost/myapp');
