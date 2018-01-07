@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+     head
+          meta(charset='utf-8')
+          meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+          title Mintex|seller
+
+     body
+          section.container
+               div
+                    p= user
+                         a(href='http://localhost:3000/mintex/logout')
+                              | , logout
+                         |.
+               div
+                    h2 To delete this product:
+                         a(href='http://localhost:3000/mintex/seller/deleteproduct')
+                              |  . click here
+                         |.
+                    h1 Update the Fields
+                    - var productUrl = 'http://localhost:3000/mintex/seller/updateproduct?productid=' + product.id;
+                    form(method='post', action=productUrl)
+                         p *
+                              input(type='text' name='name' value=product.name)
+                         p *
+                              input(type='number' name='price' value=product.price)
+                         p *
+                              input(type='text' name='description' value=product.description)
+                         p
+                              input(type='text' name='color' placeholder='color' value='')
+                         p
+                              input(type='text' name='size' placeholder='size' value='')
+                         p *
+                              input(type='text' name='brand' value=product.brand)
+                         p *
+                              input(type='text' name='catagory' value=product.catagory)
+                         p
+                              input(type='text' name='gendertype' placeholder='Specify if it is gender specific' value='')
+                         p *
+                              input(type='number' name='stock' value=product.stock)
+                         p
+                              input(type='text' name='Keywords' placeholder='keywords related to product' value='')
+                         p.submit
+                              input(type='submit' name='' value='Update Product')

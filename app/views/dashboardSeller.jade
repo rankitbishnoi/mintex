@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+     head
+          meta(charset='utf-8')
+          meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+          title Mintex|seller
+
+     body
+          section.container
+               div
+                    p= seller
+                         a(href='http://localhost:3000/mintex/logout')
+                              | , logout
+                         |.
+               div
+                    a(href='http://localhost:3000/mintex/seller/newproduct/screen')
+                         | h3 Add a new Product
+                    br
+                    a(href='http://localhost:3000/mintex/seller/updateproduct/screen')
+                         | h3 Update existing products
+                    br
+                    a(href='http://localhost:3000/mintex/dashboard')
+                         | h3 Find a product
+               div
+                    h4 Products Added until now:
+                    for product in list
+                         div
+                              - var productUrl = 'http://localhost:3000/mintex/product?productid=' + product.id;
+                              a(href=productUrl)
+                                   h3= product.name
+                                   h4= product.price

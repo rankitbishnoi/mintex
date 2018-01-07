@@ -1,0 +1,19 @@
+{
+  "name": "mintex",
+  "version": "1.0.0",
+  "description": "a ecommenrce website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rankitbishnoi/mintex.git"
+  },
+  "author": "Rankit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rankitbishnoi/mintex/issues"
+  },
+  "homepage": "https://github.com/rankitbishnoi/mintex#readme"
+}
