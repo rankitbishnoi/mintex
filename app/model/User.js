@@ -14,6 +14,7 @@ var userSchema = new mongoose.Schema({
      address             : String,
      company             : String,
      gstin               : String,
+     cart                : [{}],
      createdOn           : {  type: Date,    default: Date.now },
      lastLogin           : Date
 });

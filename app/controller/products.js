@@ -219,7 +219,6 @@ module.exports.controller = (app) => {
      });
 
      userRouter.get('/addtocart', (req, res) => {
-          req.session.user.cart = [];
           var productobj = {
                id: req.query.productid,
                name: req.query.name,
@@ -227,7 +226,7 @@ module.exports.controller = (app) => {
           }
           req.session.user.cart.push(productobj);
 
-          res.redirect('/product?productid='+ req.query.productid);
+          res.redirect('/mintex/product?productid='+ req.query.productid);
      });
 
      userRouter.get('/removefromcart', (req, res) => {
@@ -237,7 +236,7 @@ module.exports.controller = (app) => {
      })
 
      userRouter.get('/cart', (req, res)=> {
-          res.render('cart', {products: req.session.user.cart});
+          res.render('cart', {products: req.session.user.cart});console.log(req.session.user);
      });
 
      userRouter.post('/seller/deleteproduct', auth.checkLogin, auth.verifySeller, (req, res) => {

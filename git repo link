@@ -1,0 +1,6 @@
+https://github.com/rankitbishnoi/mintex
+
+
+1.   I have created the forgot password api but as after the node mailer part, i had to delete my password from code for privacy reasons. so no jade is created for updating the password. i have used OTPLIB to create otp and authentication. And used nodemailer to sned the otp.
+
+2.  Passportjs was not used for facebook login or google login niether for user nor for the seller as they do not provide all the information nedded like mobile number etc.

@@ -8,15 +8,12 @@ html(lang='en')
      body
           section.container
                div
-                    -var i=o;
                     for product in products
                          div
-                              -var i = i+1;
-                              h3= i
                               -var producturl='http://localhost:3000/mintex/product?productid=' + product.id;
                               a(href=producturl)
-                              h3 product.name
-                              h3 product.price
+                                   h3= product.name
+                                   h3= product.price
                               -var removeurl= 'http://localhost:3000/mintex/removefromcart?i=' + i;
                               h5
                                    a(href=removeurl)
